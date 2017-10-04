@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans	xmlns="http://www.springframework.org/schema/beans"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans
+			http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/context
+			http://www.springframework.org/schema/context/spring-context-2.5.xsd">
+    
+	<bean id="person1" class="com.company.common.Person">
+		<property name="firstName" value="Ivan"/>
+		<property name="lastName">
+			<value>Segeev</value> 
+		</property>
+		<property name="age" >
+			<value>30</value>
+		</property>
+	</bean>
+	
+	<bean id="person2" class="com.company.common.Person">
+		<constructor-arg value="Ivanov"/>
+	</bean>
+	
+	<bean id="person3" class="com.company.common.Person">
+		<constructor-arg index="1" value="Petrov"/>
+		<constructor-arg index="0" value="Sergey"/>
+		<constructor-arg index="2" value="30"/>
+	</bean>
+</beans>
